@@ -1,0 +1,23 @@
+* TODO Patch add_index
+
+Look into both of these:
+
+- [ ] activerecord/lib/active_record/connection_adapters/abstract/schema_statements.rb
+- [ ] activerecord/lib/active_record/connection_adapters/postgresql/schema_statements.rb
+
+* TODO Add documentation
+
+* TODO Write readme
+
+* TODO Investigate whether this will work for SQLite as well
+
+SQLite also [[https://sqlite.org/foreignkeys.html#fk_deferred][supports deferred constraints]] (at least for foreign keys) so it
+should work since this is standard SQL.
+
+* TODO Attempt to figure out a way to map errors
+
+I'm not sure this will work because the error message is about what the
+violation is, not the violating row, and it pops with the transaction commit,
+not the statement.
+
+[[https://begriffs.com/posts/2017-08-27-deferrable-sql-constraints.html#harder-troubleshooting][This article]] suggests that it won't be a doable, but it's worth a shot.
