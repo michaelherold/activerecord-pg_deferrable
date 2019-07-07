@@ -20,10 +20,11 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
-  spec.add_dependency 'activerecord', '~> 6.0.0.rc1'
+  spec.add_dependency 'activerecord', '>= 4.1.0'
   spec.add_dependency 'pg'
 
   spec.add_development_dependency 'activesupport'
+  spec.add_development_dependency 'appraisal'
   spec.add_development_dependency 'bundler', '~> 1.17'
   spec.add_development_dependency 'minitest', '~> 5.0'
   spec.add_development_dependency 'minitest-reporters'

@@ -5,3 +5,9 @@ cache: bundler
 rvm:
   - 2.6.3
 before_install: gem install bundler -v 1.17.3
+
+gemfile:
+  - gemfiles/6.0.gemfile
+  - gemfiles/5.2.gemfile
+  - gemfiles/5.1.gemfile
+  - gemfiles/edge.gemfile

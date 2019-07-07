@@ -1,5 +1,5 @@
 PATH
-  remote: .
+  remote: ..
   specs:
     activerecord-pg_deferrable (0.1.0)
       activerecord (>= 4.1.0)
@@ -59,6 +59,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activerecord (= 6.0.0.rc1)
   activerecord-pg_deferrable!
   activesupport
   appraisal

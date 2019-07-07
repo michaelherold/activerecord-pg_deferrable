@@ -2,6 +2,7 @@
 
 require 'bundler/gem_tasks'
 require 'rake/testtask'
+require 'appraisal'
 
 task :connection do
   require 'active_record'
@@ -43,3 +44,9 @@ namespace :test do
 end
 
 task test: %w[test:setup test:run test:teardown]
+
+if !ENV['APPRAISAL_INITIALIZED'] && !ENV['CI']
+  task default: :appraisal
+else
+  task default: :test
+end
